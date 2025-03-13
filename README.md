@@ -1,55 +1,40 @@
-# React + TypeScript + Vite
+# 📚 Educational Platform - React App  
+A web-based educational platform built using React for students, teachers, and institute administrators. This project demonstrates authentication, role-based dashboards, course management, and assignment handling.
+## 🚀 Features Implemented  
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+### 🔐 Authentication & Authorization
+- Login for **Students, Teachers, and Institute Admins**.
+- Role-based redirection after login.
+- Form validation (email format, password length, required fields).
 
-Currently, two official plugins are available:
+### 📘 Student Dashboard
+- View list of **enrolled courses**.
+- Access **course materials and announcements**.
+- Submit assignments (text input or file upload).
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+### 👨‍🏫 Teacher Dashboard
+- **Manage Courses** (Create, edit, delete).
+- **View & grade assignments** submitted by students.
+- **Post announcements** to students.
 
-## Expanding the ESLint configuration
+### 🏫 Institute Dashboard
+- **Manage Users** (View list of students & teachers).
+- **Institute Details** (Name, Address, Contact Info).
+- **Analytics** (Total students, courses, etc.).
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+## 🛠️ Technical Stack
+- **React (Vite)**
+- **React Router** (for navigation & protected routes)
+- **React Context API** (for state management)
+- **Tailwind CSS** (for styling)
+- **Mock API** (JSON files to simulate backend data)
+- **React Hooks** (`useState`, `useEffect`, `useContext`)
 
-```js
-export default tseslint.config({
-  extends: [
-    // Remove ...tseslint.configs.recommended and replace with this
-    ...tseslint.configs.recommendedTypeChecked,
-    // Alternatively, use this for stricter rules
-    ...tseslint.configs.strictTypeChecked,
-    // Optionally, add this for stylistic rules
-    ...tseslint.configs.stylisticTypeChecked,
-  ],
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
-```
+## 🏗️ Project Setup Instructions
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
-
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
-
-export default tseslint.config({
-  plugins: {
-    // Add the react-x and react-dom plugins
-    'react-x': reactX,
-    'react-dom': reactDom,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended typescript rules
-    ...reactX.configs['recommended-typescript'].rules,
-    ...reactDom.configs.recommended.rules,
-  },
-})
-```
-# educational-platform
+### 1️⃣ Clone the Repository
+```sh
+git clone https://github.com/bhatnagar-dev/educational-platform.git
+cd educational-platform
+npm install
+npm run dev
